@@ -1,0 +1,1368 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/"
+     xml:base="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/actor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/actor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/primitive_action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+        <rdfs:comment>The object performs the action.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/primitive_action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+        <rdfs:comment>The object is necessary to perform the action but not affected by the action. Or just not focused in???</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/primitive_action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+        <rdfs:comment>The object is affected by the action.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/primitive_action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/primitive_action">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/actor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/actor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A primitive action has at least one actor.
+Objects can be participated in a primitive action?
+The role of the objects are classified as a basis of the action and an operand of the action.
+
+If the action affects to the actor or its part, then the actor and its part can be interpreted as operand??</rdfs:comment>
+        <rdfs:label>primitive action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0001 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0001">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0089"/>
+        <rdfs:label xml:lang="en">Bending a body</rdfs:label>
+        <rdfs:label xml:lang="en">bend a body</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0002 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0002">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Breaking</rdfs:label>
+        <rdfs:label xml:lang="en">break</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0003 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0003">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Brushing</rdfs:label>
+        <rdfs:label xml:lang="en">brush</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0004 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0004">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Carrying</rdfs:label>
+        <rdfs:label xml:lang="en">carry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0005 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0005">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Catching</rdfs:label>
+        <rdfs:label xml:lang="en">catch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0006 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0006">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Climbing</rdfs:label>
+        <rdfs:label xml:lang="en">climb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0007 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0007">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Closing</rdfs:label>
+        <rdfs:label xml:lang="en">close</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0008 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0008">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Covering</rdfs:label>
+        <rdfs:label xml:lang="en">cover</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0009 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0009">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Crawling</rdfs:label>
+        <rdfs:label xml:lang="en">crawl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0010 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0010">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Cutting</rdfs:label>
+        <rdfs:label xml:lang="en">cut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0011 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0011">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Drinking</rdfs:label>
+        <rdfs:label xml:lang="en">drink</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0012 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0012">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Driving animal-powered vehicles</rdfs:label>
+        <rdfs:label xml:lang="en">drive animal-powered vehicles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0013 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0013">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Driving human-powered transportation</rdfs:label>
+        <rdfs:label xml:lang="en">drive human-powered transportation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0014 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0014">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Driving motorized vehicles</rdfs:label>
+        <rdfs:label xml:lang="en">drive motorized vehicles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0015 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0015">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Drying</rdfs:label>
+        <rdfs:label xml:lang="en">dry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0016 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0016">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Eating</rdfs:label>
+        <rdfs:label xml:lang="en">eat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0017 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0017">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0089"/>
+        <rdfs:label xml:lang="en">Excretion</rdfs:label>
+        <rdfs:label xml:lang="en">excretion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0018 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0018">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Folding</rdfs:label>
+        <rdfs:label xml:lang="en">fold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0019 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0019">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Grasping</rdfs:label>
+        <rdfs:label xml:lang="en">grasp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0020 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0020">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Hitting</rdfs:label>
+        <rdfs:label xml:lang="en">hit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0021 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0021">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Jumping</rdfs:label>
+        <rdfs:label xml:lang="en">jump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0022 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0022">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Kneeling</rdfs:label>
+        <rdfs:label xml:lang="en">kneel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0023 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0023">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Lifting</rdfs:label>
+        <rdfs:label xml:lang="en">lift</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0024 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0024">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Listening</rdfs:label>
+        <rdfs:label xml:lang="en">listen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0025 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0025">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Lying down</rdfs:label>
+        <rdfs:label xml:lang="en">lie down</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0026 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0026">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0089"/>
+        <rdfs:label xml:lang="en">Maintaining a body position</rdfs:label>
+        <rdfs:label xml:lang="en">maintain a body position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0027 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0027">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Maintaining a kneeling position</rdfs:label>
+        <rdfs:label xml:lang="en">maintain a kneeling position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0028 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0028">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Maintaining a lying position</rdfs:label>
+        <rdfs:label xml:lang="en">maintain a lying position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0029 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0029">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Maintaining a sitting position</rdfs:label>
+        <rdfs:label xml:lang="en">maintain a sitting position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0030 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0030">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Maintaining a squatting position</rdfs:label>
+        <rdfs:label xml:lang="en">maintain a squatting position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0031 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0031">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Maintaining a standing position</rdfs:label>
+        <rdfs:label xml:lang="en">maintain a standing position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0032 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0032">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Opening</rdfs:label>
+        <rdfs:label xml:lang="en">open</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0033 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0033">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Picking up</rdfs:label>
+        <rdfs:label xml:lang="en">pick up</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0034 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0034">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Pointing at</rdfs:label>
+        <rdfs:label xml:lang="en">point at</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0035 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0035">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Pouring</rdfs:label>
+        <rdfs:label xml:lang="en">pour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0036 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0036">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0094"/>
+        <rdfs:label xml:lang="en">Producing body language</rdfs:label>
+        <rdfs:label xml:lang="en">produce body language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0037 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0037">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0095"/>
+        <rdfs:label xml:lang="en">Producing drawings and photographs</rdfs:label>
+        <rdfs:label xml:lang="en">produce drawings and photographs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0038 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0038">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0094"/>
+        <rdfs:label xml:lang="en">Producing messages in formal sign language</rdfs:label>
+        <rdfs:label xml:lang="en">produce messages in formal sign language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0039 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0039">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Pulling</rdfs:label>
+        <rdfs:label xml:lang="en">pull</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0040 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0040">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Pushing</rdfs:label>
+        <rdfs:label xml:lang="en">push</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0041 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0041">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Putting down objects</rdfs:label>
+        <rdfs:label xml:lang="en">put down objects</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0042 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0042">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Putting on clothes</rdfs:label>
+        <rdfs:label xml:lang="en">put on clothes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0043 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0043">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Reaching</rdfs:label>
+        <rdfs:label xml:lang="en">reach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0044 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0044">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Releasing</rdfs:label>
+        <rdfs:label xml:lang="en">release</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0045 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0045">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Riding animals for transportation</rdfs:label>
+        <rdfs:label xml:lang="en">ride animals for transportation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0046 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0046">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Rinsing</rdfs:label>
+        <rdfs:label xml:lang="en">rinse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0047 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0047">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Rolling Over</rdfs:label>
+        <rdfs:label xml:lang="en">roll over</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0048 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0048">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Running</rdfs:label>
+        <rdfs:label xml:lang="en">run</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0049 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0049">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Scrubbing</rdfs:label>
+        <rdfs:label xml:lang="en">scrub</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0050 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0050">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Sewing</rdfs:label>
+        <rdfs:label xml:lang="en">sew</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0051 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0051">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Shaking</rdfs:label>
+        <rdfs:label xml:lang="en">shake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0052 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0052">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Shaving</rdfs:label>
+        <rdfs:label xml:lang="en">shave</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0053 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0053">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Singing</rdfs:label>
+        <rdfs:label xml:lang="en">sing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0054 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0054">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Sitting</rdfs:label>
+        <rdfs:label xml:lang="en">sit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0055 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0055">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Smelling</rdfs:label>
+        <rdfs:label xml:lang="en">smell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0056 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0056">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Soaking</rdfs:label>
+        <rdfs:label xml:lang="en">soak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0057 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0057">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0094"/>
+        <rdfs:label xml:lang="en">Speaking</rdfs:label>
+        <rdfs:label xml:lang="en">speak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0058 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0058">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Spreading</rdfs:label>
+        <rdfs:label xml:lang="en">spread</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0059 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0059">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Squatting</rdfs:label>
+        <rdfs:label xml:lang="en">squat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0060 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0060">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Squeezing</rdfs:label>
+        <rdfs:label xml:lang="en">squeeze</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0061 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0061">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Standing</rdfs:label>
+        <rdfs:label xml:lang="en">stand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0062 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0062">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Stirring</rdfs:label>
+        <rdfs:label xml:lang="en">stir</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0063 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0063">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Stretching</rdfs:label>
+        <rdfs:label xml:lang="en">stretch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0064 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0064">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Sweeping</rdfs:label>
+        <rdfs:label xml:lang="en">sweep</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0065 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0065">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Swimming</rdfs:label>
+        <rdfs:label xml:lang="en">swim</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0066 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0066">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Taking off clothes</rdfs:label>
+        <rdfs:label xml:lang="en">take off clothes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0067 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0067">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Tasting</rdfs:label>
+        <rdfs:label xml:lang="en">taste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0068 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0068">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Throwing</rdfs:label>
+        <rdfs:label xml:lang="en">throw</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0069 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0069">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Touching</rdfs:label>
+        <rdfs:label xml:lang="en">touch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0070 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0070">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Twisting</rdfs:label>
+        <rdfs:label xml:lang="en">twist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0071 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0071">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Turning to</rdfs:label>
+        <rdfs:label xml:lang="en">turn to</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0072 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0072">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Uncovering</rdfs:label>
+        <rdfs:label xml:lang="en">uncover</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0073 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0073">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Unfolding</rdfs:label>
+        <rdfs:label xml:lang="en">unfold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0074 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0074">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Unwrapping</rdfs:label>
+        <rdfs:label xml:lang="en">unwrap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0075 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0075">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Vacuuming</rdfs:label>
+        <rdfs:label xml:lang="en">vacuum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0076 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0076">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Walking</rdfs:label>
+        <rdfs:label xml:lang="en">walk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0077 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0077">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Washing</rdfs:label>
+        <rdfs:label xml:lang="en">wash</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0078 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0078">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Watching</rdfs:label>
+        <rdfs:label xml:lang="en">watch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0079 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0079">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Wiping</rdfs:label>
+        <rdfs:label xml:lang="en">wipe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0080 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0080">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Wrapping</rdfs:label>
+        <rdfs:label xml:lang="en">wrap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0081 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0081">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Writing</rdfs:label>
+        <rdfs:label xml:lang="en">write</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0082 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0082">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Breathing in</rdfs:label>
+        <rdfs:label xml:lang="en">breathe in</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0083 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0083">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Breathing out</rdfs:label>
+        <rdfs:label xml:lang="en">breathe out</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0084 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0084">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Diving</rdfs:label>
+        <rdfs:label xml:lang="en">dive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0085 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0085">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Swinging</rdfs:label>
+        <rdfs:label xml:lang="en">swing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0086 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0086">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Gargling</rdfs:label>
+        <rdfs:label xml:lang="en">gargle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0087 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0087">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090"/>
+        <rdfs:label xml:lang="en">Tying</rdfs:label>
+        <rdfs:label xml:lang="en">tie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0088 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0088">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092"/>
+        <rdfs:label xml:lang="en">Climbing down</rdfs:label>
+        <rdfs:label xml:lang="en">climb down</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0089 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0089">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0091"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This action does not need any object and person other than the actor.</rdfs:comment>
+        <rdfs:label>Independent action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0090">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0091"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>This action needs one object as an operand of the action or as a basis to perform the action.
+E.g. Watching action requires at least one operand.
+E.g. Standing action does not require its operand but requires a floor to stand.</rdfs:comment>
+        <rdfs:label>Single-actor Single-object action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0091 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0091">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/primitive_action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/actor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Single-actor action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0092">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0091"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label>Single-actor Multi-object action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0093 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0093">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/primitive_action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/actor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Multi-actor action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0094 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0094">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0093"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label>Multi-actor Single-object action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0095 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0095">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0093"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/basis"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/operand"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label>Multi-actor Multi-object action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0096 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0096">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+        <rdfs:label>Solid object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0097 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0097">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+        <rdfs:label>Liquid object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0098 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0098">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+        <rdfs:label>Gas object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0099 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0099">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/object"/>
+        <rdfs:label>Information object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0001"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0002"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0003"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0004"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0005"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0006"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0007"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0008"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0009"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0010"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0011"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0012"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0013"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0014"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0015"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0016"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0017"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0019"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0021"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0022"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0023"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0024"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0025"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0026"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0027"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0028"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0029"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0030"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0031"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0032"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0033"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0034"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0035"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0036"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0037"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0038"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0039"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0040"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0041"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0042"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0043"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0044"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0045"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0046"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0047"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0048"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0049"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0050"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0051"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0052"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0053"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0054"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0055"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0056"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0057"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0058"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0059"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0060"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0061"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0062"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0063"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0064"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0065"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0066"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0067"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0068"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0069"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0070"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0071"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0072"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0073"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0074"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0075"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0076"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0077"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0078"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0079"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0080"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0081"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0082"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0083"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0084"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0085"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0086"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0087"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/westvillage2460/ontologies/2021/3/untitled-ontology-119/0088"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
