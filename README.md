@@ -15,7 +15,7 @@ The fifth criterion is to exclude actions that multiple primitive actions can ex
 Following the criteria, 79 words were extracted as primitive actions from the International Classification of Functioning, Disability and Health (ICF) and HomeOntology. Based on these, two words were added. Table 1 shows how many terms were extracted from which resources.
 
 ### Table1: Source of Primitive action
-||ICF|HomeOntology|独自に追加|HMDB51|STAIR Actions|
+||ICF|HomeOntology|Added our own|HMDB51|STAIR Actions|
 |---|---:|---:|---:|---:|---:|
 |1Person 0Object|2|0|1|0|0|
 |1Person 1Object|32|12|1|4|2|
